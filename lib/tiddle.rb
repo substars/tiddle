@@ -1,4 +1,5 @@
 require "tiddle/version"
+fail "tiddle #{Tiddle::VERSION} does not support MRI 1.9." if RUBY_PLATFORM != 'java' && RUBY_VERSION < '2.0.0'
 require "tiddle/model"
 require "tiddle/strategy"
 require "tiddle/rails"
